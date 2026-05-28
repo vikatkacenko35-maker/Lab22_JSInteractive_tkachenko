@@ -4,7 +4,7 @@ class Calculator {
     this.expression = "";
     this.hasError = false;
   }
-  init() {
+init() {
     document.querySelectorAll("button").forEach((button) =>{
         button.addEventListener("click", () => {
             this.handleButtonClick(button.textContent);
@@ -12,7 +12,7 @@ class Calculator {
     });
     this.updateDisplay();
   }
-  handleButtonClick(value) {
+handleButtonClick(value) {
   if (this.hasError && value !== "C") {
     this.clear();
   }
